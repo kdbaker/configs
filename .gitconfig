@@ -1,6 +1,6 @@
 [user]
-	name = David O'Hara
-	email = david@davidohara.net
+	name = Tim Rayburn
+	email = tim@timrayburn.net
 
 [color]
   branch = auto
@@ -22,6 +22,14 @@
   added = yellow
   changed = green
   untracked = cyan
+  
+[merge]
+	tool = bc3
+
+[mergetool "bc3"]
+    cmd = 'C:/Program Files (x86)/Beyond Compare 3/BComp.com' "$PWD/$LOCAL" "$PWD/$REMOTE" "$PWD/$BASE" "$PWD/$MERGED"    
+    keepBackup = false    
+    trustExitCode = false
 
 [alias]
 	# Snagged from Ryan Tomayko (http://github.com/rtomayko/dotfiles)
