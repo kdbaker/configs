@@ -37,8 +37,8 @@
 	ci = commit --verbose
 	cn = commit --verbose --amend
 	ca = commit --verbose --all
-	cw = commit -m "WIP"
-	cm = commit -m
+	cw = commit -am "WIP"
+	cm = commit -am
 	cc = commit -c
 	
 	# branch
@@ -75,6 +75,10 @@
 	# status
 	s = -p status # with pagination
   ss = -p status -s
+  
+  # TFS
+  tpr = tf pull --rebase --deep
+  tcd = tf checkin --deep
 	
 	# log
 	l = log --pretty=oneline --abbrev-commit
@@ -98,5 +102,8 @@
 	rv = remote -v
 	fp = format-patch --stdout
 
-[achievement]
-	upload = true
+[core]
+	editor = uedit32.exe
+[http]
+	postBuffer = 52428800
+[credential]
