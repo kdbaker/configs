@@ -97,6 +97,11 @@
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative 
 	lga = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --all
 
+	# log - standup
+	standup = log --pretty=format:'%Cgreen(%cr)%Creset %s' --since="yesterday" --author=Kevin
+	standup2 = log --pretty=format:'%Cgreen(%cr)%Creset %s' --since=2.days.ago --author=Kevin
+	weekreview = log --pretty=format:'%Cgreen(%cr)%Creset %s' --since=last.sunday --author=Kevin
+
 	# clean
 	prune = fetch --prune
 
