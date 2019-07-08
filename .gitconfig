@@ -110,6 +110,7 @@
 	ki = stash --keep-index
 
 	# experimental
+	force-nice = --force-with-lease
 	stage = add
 	unstage = reset HEAD
 	pop = reset --soft HEAD^
