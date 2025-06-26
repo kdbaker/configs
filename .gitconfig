@@ -106,7 +106,7 @@
 	prune = fetch --prune
 
 	# clean branches
-	cleanlocal = git branch | ? { $_ -notmatch "^\*" } | % { git branch -D $_.Trim() }
+	clean-branches = "!f() { git branch | grep -v \"^*\" | xargs git branch -D; }; f"
 
 	# misc
 	pi = cherry-pick
