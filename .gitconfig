@@ -105,6 +105,9 @@
 	# clean
 	prune = fetch --prune
 
+	# clean branches
+	cleanlocal = git branch | ? { $_ -notmatch "^\*" } | % { git branch -D $_.Trim() }
+
 	# misc
 	pi = cherry-pick
 	ki = stash --keep-index
